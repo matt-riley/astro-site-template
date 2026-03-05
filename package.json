@@ -21,7 +21,7 @@
   "devDependencies": {
     "oxfmt": "^0.36.0",
     "oxlint": "^1.0.0",
-    "vitest": "^3.0.0",
+    "vitest": "^4.0.0",
     "wrangler": "^4.0.0"
   },
   "packageManager": "pnpm@10.30.3"
