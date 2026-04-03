@@ -6,7 +6,7 @@ on:
 
 jobs:
   deploy:
-    uses: matt-riley/matt-riley-ci/.github/workflows/cloudflare-pages-deploy.yml@bd605dc142b75bef90c69f2707997f8cb161abc8 # main
+    uses: matt-riley/matt-riley-ci/.github/workflows/cloudflare-pages-deploy.yml@92dae3a7b997354d5b579165f9e0cbe3463905c2 # main
     with:
       project-name: mysite
       package-manager: pnpm
