@@ -8,9 +8,11 @@ on:
 
 jobs:
   ci:
-    uses: matt-riley/matt-riley-ci/.github/workflows/node-ci.yml@0d1d8e7a149a53fcaaca6e128f62e0e3d8fdf293 # main
+    uses: matt-riley/matt-riley-ci/.github/workflows/node-ci.yml@v1
     with:
       package-manager: pnpm
+      run-fallow: false
+      run-knip: false
       run-lint: true
       run-test: true
       run-build: true
