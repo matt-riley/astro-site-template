@@ -5,11 +5,24 @@ on:
     branches: [main]
 
 jobs:
+  build:
+    permissions:
+      contents: read
+    uses: matt-riley/matt-riley-ci/.github/workflows/ci.yml@cb986078a5bd4775e5fb05348f3618e41fedf4de # v4
+    with:
+      install: true
+      build: true
+      artifact-name: pages-site
+      artifact-path: dist
+
   deploy:
-    uses: matt-riley/matt-riley-ci/.github/workflows/cloudflare-pages-deploy.yml@cc060a6749be6869154f21c6b3463a1ca218e2e3 # main
+    needs: build
+    permissions:
+      contents: read
+    uses: matt-riley/matt-riley-ci/.github/workflows/cloudflare-pages-deploy.yml@cb986078a5bd4775e5fb05348f3618e41fedf4de # v4
     with:
       project-name: mysite
-      package-manager: pnpm
+      artifact-name: pages-site
     secrets:
       CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
       CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
