@@ -1,6 +1,9 @@
 packages:
   - '.'
 
+overrides:
+  undici@<7.30.1: 7.30.1
+
 allowBuilds:
   esbuild: true
   sharp: true
