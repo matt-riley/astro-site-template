@@ -19,10 +19,10 @@
     "tailwindcss": "^4.0.0"
   },
   "devDependencies": {
-    "oxfmt": "^0.75.0",
+    "oxfmt": "^0.76.0",
     "oxlint": "^1.0.0",
     "vitest": "^5.0.0",
     "wrangler": "^4.0.0"
   },
-  "packageManager": "pnpm@12.16.1"
+  "packageManager": "pnpm@12.18.0"
 }
